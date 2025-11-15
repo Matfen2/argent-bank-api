@@ -15,7 +15,13 @@ const PORT = process.env.PORT || 3001
 dbConnection()
 
 // Handle CORS issues
-app.use(cors())
+app.use(cors({
+  origin: [
+    'http://localhost:5173',           // Dev local
+    'https://ton-projet.vercel.app'    // Production (à modifier après déploiement)
+  ],
+  credentials: true
+}));
 
 // Request payload middleware
 app.use(express.json())
