@@ -22,7 +22,7 @@ dbConnection()
 app.use(cors({
   origin: [
     'http://localhost:5173',           // Dev local
-    'https://ton-projet.render.app'    // Production (à modifier après déploiement)
+    'https://argent-bank-brown.vercel.app'    
   ],
   credentials: true
 }))
